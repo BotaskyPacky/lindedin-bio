@@ -1,2 +1,144 @@
-<h1>My homepage</h1>
-<h2>My Lindedin Bio</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding + make the page scale properly on phones -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chunyang Li</title>
+
+  <!-- Google Fonts: Playfair Display (name) and Raleway (everything else) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome: provides the GitHub / LinkedIn icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* Debugging helper: uncomment to outline every element */
+    /* * { border: 1px red dashed; } */
+
+    /* ---------- Page ---------- */
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background-attachment: fixed;
+      color: white;
+      font-family: "Raleway", sans-serif;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* ---------- Layout ---------- */
+    .main-container {
+      max-width: 640px;
+      margin: auto;
+    }
+
+    /* ---------- Avatar ---------- */
+    .image-row {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar-image {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+      border-radius: 128px;
+    }
+
+    /* ---------- Name ---------- */
+    .name-row {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    /* ---------- Social icons ---------- */
+    .social-icons-row {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    /* ---------- Link buttons ---------- */
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 5px;
+      padding-right: 53px; /* 48px thumbnail + 5px padding, so the text stays centered */
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 1000px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .thumbnail {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 48px;
+    }
+
+    .link-text {
+      flex-grow: 1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+
+    <!-- Profile picture -->
+    <div class="image-row">
+      <img class="avatar-image" src="/thumbnails/profile-pic.jpg" alt="Profile picture of Chunyang Li">
+    </div>
+
+    <!-- Name -->
+    <div class="name-row">
+      Chunyang Li
+    </div>
+
+    <!-- Social icons (icon only; aria-label tells screen readers what each one is) -->
+    <div class="social-icons-row">
+      <a href="https://github.com/BotaskyPacky" target="_blank" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/chunyang-li-084116a4/" target="_blank" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+
+    <!-- Links: replace href, thumbnail, alt text and label with your own -->
+    <div class="links-row">
+      <a class="item" href="https://example.com/1" target="_blank">
+        <img class="thumbnail" src="/thumbnails/link-1.png" alt="Thumbnail for link 1">
+        <span class="link-text">Placeholder Link 1</span>
+      </a>
+      <a class="item" href="https://example.com/2" target="_blank">
+        <img class="thumbnail" src="/thumbnails/link-2.png" alt="Thumbnail for link 2">
+        <span class="link-text">Placeholder Link 2</span>
+      </a>
+      <a class="item" href="https://example.com/3" target="_blank">
+        <img class="thumbnail" src="/thumbnails/link-3.png" alt="Thumbnail for link 3">
+        <span class="link-text">Placeholder Link 3</span>
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
