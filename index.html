@@ -28,8 +28,15 @@
       margin: 0;
       padding-top: 40px;
       padding-bottom: 40px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      background-attachment: fixed;
+      /* Two layers: a semi-transparent dark overlay drawn on top of the photo,
+         so the white text stays readable */
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/thumbnails/background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* image stays put while the page scrolls */
       color: white;
       font-family: "Raleway", sans-serif;
     }
